@@ -1,0 +1,178 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* 카테고리 버튼 스타일 */
+.category-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.category-buttons .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.category-buttons .btn:hover {
+    background-color: #0056b3;
+}
+
+/* 공지사항 테이블 스타일 */
+.notice-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.notice-table th, .notice-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.notice-table th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+}
+
+.notice-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.notice-table a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.notice-table a:hover {
+    text-decoration: underline;
+}
+
+/* 공지사항 액션 버튼 스타일 */
+.notice-actions {
+    text-align: right;
+}
+
+.notice-actions .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.notice-actions .btn:hover {
+    background-color: #218838;
+}
+
+.notice-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, 
+.form-group textarea, 
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus, 
+.form-group select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* 폼 액션 버튼 스타일 */
+.form-actions {
+    text-align: right;
+}
+
+.form-actions .btn {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.form-actions .btn:hover {
+    background-color: #218838;
+}
+
+.form-actions .btn:last-of-type {
+    background-color: #dc3545;
+}
+
+.form-actions .btn:last-of-type:hover {
+    background-color: #c82333;
+}
+
+/* 반응형 설정 */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .form-actions {
+        text-align: center;
+    }
+
+    .form-actions .btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
