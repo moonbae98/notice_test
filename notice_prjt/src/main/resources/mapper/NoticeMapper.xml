@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="NoticeMapper">
+    <resultMap id="noticeResultMap" type="com.human.notice.vo.NoticeVO">
+        <result property="nidx" column="n_idx"/>
+        <result property="ncategory" column="ncategory"/>
+        <result property="ntitle" column="ntitle"/>
+        <result property="ncontent" column="ncontent"/>
+        <result property="nregdate" column="nregdate"/>
+        <result property="nupdate" column="nupdate"/>
+        <result property="nstatus" column="nstatus"/>
+    </resultMap>
+
+    <select id="selectAll" resultMap="noticeResultMap">
+        SELECT * FROM tb_notice WHERE nstatus = 'N'
+    </select>
+
+    <select id="selectByCategory" parameterType="string" resultMap="noticeResultMap">
+        SELECT * FROM tb_notice WHERE ncategory = #{category} AND nstatus = 'N'
+    </select>
+    
+    <insert id="insertNotice">
+        INSERT INTO tb_notice (ncategory, ntitle, ncontent)
+        VALUES (#{ncategory}, #{ntitle}, #{ncontent})
+    </insert>
+</mapper>
