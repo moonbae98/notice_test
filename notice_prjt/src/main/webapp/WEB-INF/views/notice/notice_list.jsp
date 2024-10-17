@@ -27,16 +27,18 @@
                     <th>번호</th>
                     <th>구분</th>
                     <th>제목</th>
+                    <th>내용</th>
                     <th>등록일</th>
                 </tr>
             </thead>
             <tbody>
                 <c:forEach var="notice" items="${noticeList}">
                     <tr>
-                        <td>${notice.nidx}</td>
-                        <td>${notice.ncategory}</td>
-                        <td><a href="${pageContext.request.contextPath}/notice/detail?nIdx=${notice.nidx}">${notice.ntitle}</a></td>
-                        <td>${notice.nregdate}</td>
+                        <td>${notice.n_idx}</td>
+                        <td>${notice.n_category}</td>
+                        <td>${notice.n_title}</td>
+                        <td>${notice.n_content}</td>
+                        <td>${notice.n_regdate}</td>
                     </tr>
                 </c:forEach>
             </tbody>

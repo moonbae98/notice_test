@@ -3,25 +3,25 @@
 
 <mapper namespace="NoticeMapper">
     <resultMap id="noticeResultMap" type="com.human.notice.vo.NoticeVO">
-        <result property="nidx" column="n_idx"/>
-        <result property="ncategory" column="ncategory"/>
-        <result property="ntitle" column="ntitle"/>
-        <result property="ncontent" column="ncontent"/>
-        <result property="nregdate" column="nregdate"/>
-        <result property="nupdate" column="nupdate"/>
-        <result property="nstatus" column="nstatus"/>
+        <result property="n_idx" column="n_idx"/>
+        <result property="n_category" column="n_category"/>
+        <result property="n_title" column="n_title"/>
+        <result property="n_content" column="n_content"/>
+        <result property="n_regdate" column="n_regdate"/>
+        <result property="n_update" column="n_update"/>
+        <result property="n_status" column="n_status"/>
     </resultMap>
 
     <select id="selectAll" resultMap="noticeResultMap">
-        SELECT * FROM tb_notice WHERE nstatus = 'N'
+        SELECT * FROM tb_notice WHERE n_status = 'N'
     </select>
 
     <select id="selectByCategory" parameterType="string" resultMap="noticeResultMap">
-        SELECT * FROM tb_notice WHERE ncategory = #{category} AND nstatus = 'N'
+        SELECT * FROM tb_notice WHERE n_category = #{category} AND n_status = 'N'
     </select>
     
     <insert id="insertNotice">
-        INSERT INTO tb_notice (ncategory, ntitle, ncontent)
-        VALUES (#{ncategory}, #{ntitle}, #{ncontent})
+        INSERT INTO tb_notice (n_category, n_title, n_content)
+        VALUES (#{n_category}, #{n_title}, #{n_content})
     </insert>
 </mapper>
